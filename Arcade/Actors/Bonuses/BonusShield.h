@@ -19,5 +19,4 @@ protected:
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shield")
 	TSubclassOf  <APawnShield1> ShieldClass;		// —сылка на класс, который € буду спавнить
-
 };

@@ -2,8 +2,10 @@
 #include "Engine/World.h"	// Для таймера
 #include "TimerManager.h"	// Тоже для таймера
 
-UShootComponent::UShootComponent():
-	ShootPeriod(1.f)
+
+UShootComponent::UShootComponent()
+	/*:
+	ShootPeriod(1.f)*/
 {
 }
 
@@ -38,7 +40,6 @@ void UShootComponent::StartShooting()
 {
 	GetWorld()->GetTimerManager().SetTimer(ShootingTimer, this, &UShootComponent::Shoot, ShootPeriod, true, ShootPeriod);
 	// Устнавливаю таймер, по которому будут создаваться проджектайлы
-	// ShootingTimer - я так понимаю это тип таймера
 	// Далее вызываться будет фу-я Shoot
 	// ShootPeriod - с какой периодичностью
 	// Цикличность таймера и задержка перед первым выполнением ф-ии

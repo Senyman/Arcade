@@ -82,6 +82,8 @@ bool AArcadeGameMode::ChangeShootLevel(bool Up)		// Изменение уровня игрока и со
 	CurrentShootLevel = NewLevel;
 	PlayerPawn->ShootComponent->ShootInfos = ShootInfoLevels[CurrentShootLevel].ShootInfos;
 	PlayerPawn->ShootComponent->ShootPeriod = ShootInfoLevels[CurrentShootLevel].ShootPeriod;
+	PlayerPawn->ShootComponent->StopShooting();
+	PlayerPawn->ShootComponent->StartShooting();
 	return true;
 }
 

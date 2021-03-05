@@ -1,4 +1,5 @@
 #pragma once
+#include <vector>
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
 #include "Arcade/Components/EnemySpawnController.h"
@@ -14,13 +15,12 @@ USTRUCT(BlueprintType)
 struct FShootInfoLevel
 {
 	GENERATED_BODY()
-
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shooting")
 		TArray<FShootInfo> ShootInfos;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shooting")
-		float ShootPeriod;
+	float ShootPeriod;
 };
 
 UCLASS(minimalapi)

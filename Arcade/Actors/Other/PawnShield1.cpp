@@ -6,7 +6,6 @@
 APawnShield1::APawnShield1():
 	ShieldTime(5.f)
 {
- 
 }
 
 void APawnShield1::ActivateShield(APlayerPawn* PlayerPawn) 

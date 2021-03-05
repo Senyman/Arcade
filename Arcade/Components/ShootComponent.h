@@ -45,9 +45,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Shooting")						// Макрос для создания функций, который может быть в BP's, Callable для того, что б ф-я была не Pure
 		void StopShooting();
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Shooting")		// Через этот период будет производится стрельба
-		float ShootPeriod;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shooting")
-		TArray<FShootInfo> ShootInfos;										//	Объект типа массив структуры ShootInfo с различными параметрами
+	float ShootPeriod;
+	TArray<FShootInfo> ShootInfos;										//	Объект типа массив структуры ShootInfo с различными параметрами
 };

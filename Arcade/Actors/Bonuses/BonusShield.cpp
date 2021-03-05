@@ -7,11 +7,12 @@
 
 void ABonusShield::BonusCollected_Implementation()		// Когда взял Бонус
 {
-
 	APawn* Pawn = UGameplayStatics::GetPlayerPawn(this, 0);
 	if (!Pawn) return;
-	APlayerPawn* PlayerPawn = Cast<APlayerPawn>(Pawn);	// Ссылка на игрока
-	if (!PlayerPawn || !PlayerPawn->bCanBeDamaged) return;
+
+	APlayerPawn* PlayerPawn = Cast<APlayerPawn>(Pawn);
+	if (!PlayerPawn ) return;	// !PlayerPawn->bCanBeDamaged
+
 	Super::BonusCollected_Implementation(); // Что бы вызвалась родительская логика из Bonus
 
 	FActorSpawnParameters SpawnParams;
@@ -22,7 +23,4 @@ void ABonusShield::BonusCollected_Implementation()		// Когда взял Бонус
 	// SpawnParams отвечает за опции спавна
 
 	if(Shield) Shield->ActivateShield(PlayerPawn);		// Спавним щит для PlayerPawn
-
-	
-
 }
