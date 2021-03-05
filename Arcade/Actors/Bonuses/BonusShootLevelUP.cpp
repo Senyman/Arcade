@@ -4,13 +4,9 @@
 
 void ABonusShootLevelUP::BonusCollected_Implementation()		// Когда взял Бонус
 {
-
 	AArcadeGameMode* Gamemode = Cast< AArcadeGameMode>(UGameplayStatics::GetGameMode(this)); // Получает игровой режим правил для игры
-	if (!Gamemode) return;	// Если есть правила, то добавить очки
-	
+	if (!Gamemode) return;
+
 	Gamemode->ChangeShootLevel(true);
-
 	Super::BonusCollected_Implementation(); // Что бы вызвалась родительская логика из Bonus
-
 }
-

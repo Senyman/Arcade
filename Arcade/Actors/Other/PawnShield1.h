@@ -4,8 +4,6 @@
 #include "Arcade/Pawns/PlayerPawn.h"
 #include "PawnShield1.generated.h"
 
-
-
 UCLASS()
 class ARCADE_API APawnShield1 : public AActor
 {
@@ -13,7 +11,6 @@ class ARCADE_API APawnShield1 : public AActor
 
 protected:
 	FTimerHandle ShieldTimer;
-
 	class APlayerPawn* ShieldForPawn;
 	
 public:	

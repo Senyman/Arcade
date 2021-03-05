@@ -11,8 +11,11 @@ UCLASS()
 class ARCADE_API ABonusShield : public ABonus
 {
 GENERATED_BODY()
+
 protected:
+	
 	virtual void BonusCollected_Implementation() override;
+
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Shield")
 	TSubclassOf  <APawnShield1> ShieldClass;		// —сылка на класс, который € буду спавнить
